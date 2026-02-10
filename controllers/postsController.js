@@ -19,7 +19,7 @@ function show(req, res) {
 
     res.json(post);
 
-    
+
 }
 
 
@@ -27,7 +27,17 @@ function show(req, res) {
 
 
 function store(req, res) {
-    res.send('Creazione nuovo post');
+    // res.send('Creazione nuovo post');
+    const newId = cibo[cibo.length - 1].id + 1;
+    // Creiamo un nuovo oggetto post
+    const newPost = {
+        id: newId,
+        title: req.body.title,
+        content: req.body.content,
+        tags: req.body.tags
+    }
+    // Aggiungiamo la nuova pizza al menu
+    cibo.push(newPost);
 }
 
 function update(req, res) {

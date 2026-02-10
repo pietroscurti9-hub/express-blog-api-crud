@@ -28,7 +28,7 @@ function show(req, res) {
 
 function store(req, res) {
     // res.send('Creazione nuovo post');
-    const newId = cibo[cibo.length - 1].id + 1;
+    const newId = posts[posts.length - 1].id + 1;
     // Creiamo un nuovo oggetto post
     const newPost = {
         id: newId,
@@ -37,9 +37,10 @@ function store(req, res) {
         tags: req.body.tags
     }
     // Aggiungiamo la nuova pizza al menu
-    cibo.push(newPost);
+    posts.push(newPost);
 
-    console.log(cibo)
+
+    console.log(posts)
 
     res.status(201);
     res.json(newPost)

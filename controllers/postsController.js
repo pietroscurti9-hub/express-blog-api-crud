@@ -47,7 +47,23 @@ function store(req, res) {
 }
 
 function update(req, res) {
-    res.send('Modifica integrale del post' + req.params.id);
+    // res.send('Modifica integrale del post' + req.params.id);
+
+    const id = Number(req.params.id);
+
+    const post = posts.find(post => post.id === id);
+
+    if (!post) {
+        return res.status(404).send('Post non trovato');
+    }
+    post.title = req.body.title;
+    post.content = req.body.content;
+    post.tags = req.body.tags;
+
+    console.log(posts)
+
+    res.json(posts)
+
 }
 
 function modify(req, res) {

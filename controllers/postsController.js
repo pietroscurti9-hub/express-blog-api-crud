@@ -38,6 +38,11 @@ function store(req, res) {
     }
     // Aggiungiamo la nuova pizza al menu
     cibo.push(newPost);
+
+    console.log(cibo)
+
+    res.status(201);
+    res.json(newPost)
 }
 
 function update(req, res) {

@@ -15,4 +15,6 @@ router.patch('/:id', postsController.modify);
 router.delete('/:id', postsController.destroy);
 
 
-module.exports = router;
+module.exports = router; // commonJS
+
+// export default router; // es moduules (ES6+)

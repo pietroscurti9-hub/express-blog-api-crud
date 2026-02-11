@@ -1,12 +1,12 @@
 const posts = require('../data/posts')
 
 function index(req, res) {
+    
+    pippo.get(); // errore 500 test
     res.send({
         total: posts.length,
         posts
     });
-
-    pippo.get(); // errore 500 test
 }
 
 function show(req, res) {

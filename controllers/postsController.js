@@ -6,7 +6,7 @@ function index(req, res) {
         posts
     });
 
-    // pippo.get(); // errore 500 test
+    pippo.get(); // errore 500 test
 }
 
 function show(req, res) {
